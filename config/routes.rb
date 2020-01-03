@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create]
   delete "/session", to: "sessions#destroy", as: "logout"
   get "/session/new", to: "sessions#new", as: "login"
+  root 'members#index'
 end

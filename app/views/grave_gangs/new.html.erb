@@ -1,0 +1,13 @@
+<h1>Create a new Grave Gang!</h1>
+<h3>This is your chance to hang out with your best friends, forever</h3>
+
+<%= form_with model: @grave_gang do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+    <br>
+    <%= f.label :location_id %> (Choose a plot)<br>
+    <br>
+    <%= f.collection_select(:location_id, Location.all, :id, :name, prompt: true) %><br>
+    <br>
+    <%= f.submit %>
+<% end %>

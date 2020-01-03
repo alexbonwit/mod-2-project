@@ -1,0 +1,11 @@
+<h1>Edit an existing Tomb Theme!</h1>
+<h3>Make changes to an existing tomb theme here!</h3>
+
+<%= form_with model: @theme do |f| %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %><br>
+    <br>
+    <%= f.submit %>
+<% end %>

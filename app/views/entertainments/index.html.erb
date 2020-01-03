@@ -1,0 +1,8 @@
+<h1>Afterlife Party Ehancements</h1>
+<h3>Keep you and your friends partying forever with these Grave Gang entertainment options:</h3>
+<%= link_to "Back to all Members", members_path %><br>
+<br>
+
+<% @entertainments.each do |entertainment| %>
+    <p><%= link_to entertainment.title, entertainment %></p>
+<% end %>

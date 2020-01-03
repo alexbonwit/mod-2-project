@@ -1,0 +1,9 @@
+<h1>Grave Gangs!</h1>
+<h3>Join a Grave Gang, or get buried with your family like a loser!</h3>
+<%= link_to "Back to all Members", members_path %><br>
+<br>
+<% @grave_gangs.each do |grave_gang| %>
+    <p><%= link_to grave_gang.name, grave_gang %></p>
+<% end %>
+
+<br>

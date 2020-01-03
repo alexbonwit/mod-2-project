@@ -1,0 +1,9 @@
+<h1>Grave Gang Personal Themes</h1>
+<h3>Make your tomb your own with one of our great themes!</h3>
+<%= link_to "Back to all Members", members_path %><br>
+
+<br>
+<br>
+<% @themes.each do |theme| %>
+    <p><%= link_to theme.title, theme %></p>
+<% end %>

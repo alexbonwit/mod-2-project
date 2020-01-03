@@ -1,0 +1,11 @@
+<h1>Grave Gang Members</h1>
+<h3>Grave Gangs!! Join a Grave Gang, or Get Buried with your Family like a Loser!!</h3>
+<%= link_to "Check out all Grave Gangs", grave_gangs_path %><br>
+<%= link_to "Check out all Member Themes", themes_path %><br>
+<%= link_to "Check out all Entertainment options", entertainments_path %><br>
+
+<br>
+<br>
+<% @members.each do |member| %>
+    <p><%= link_to member.full_name, member %></p>
+<% end %>

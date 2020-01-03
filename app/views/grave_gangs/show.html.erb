@@ -1,0 +1,11 @@
+<h1>Grave Gang: <%= @grave_gang.name %>!!</h1>
+
+<h3>Member roster:</h3>
+
+<% @grave_gang.members.each do |member| %>
+    <p><%= link_to member.full_name, member %></p>
+<% end %>
+
+<br>
+
+<%= link_to "Back to all Grave Gangs", grave_gangs_path %>

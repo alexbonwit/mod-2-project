@@ -1,0 +1,22 @@
+<h1>Member page for <%= @member.full_name %></h1>
+
+<h2>My Grave Gang is <%= @member.grave_gang.name %></h2>
+
+<h3>My Personalized Grave Theme: <%= @member.theme.title %></h3>
+
+<p>Birth Date: <%= @member.birth_date %></p>
+<p>Death Date: <%= @member.death_date %></p>
+
+<br>
+<% if @current_member.id == @member.id %>
+    <%= link_to "Edit Member Profile", edit_member_path(@member) %><br>
+    <br>
+    <%= link_to "Delete User (PERMANENTLY) (YOU WILL MISS YOUR GRAVE GANG!)", @member , method: 'delete'%>
+<% end %>
+<br>
+<br>
+<%= link_to "Back to all Members", members_path %>
+
+<br>
+<br>
+<%= link_to "Log out", logout_path, method: :delete %>

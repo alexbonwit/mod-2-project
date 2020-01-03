@@ -1,0 +1,11 @@
+<h1>Create a new Tomb Theme!</h1>
+<h3>Let your unique personality reverberate forever with a custom-made tomb theme</h3>
+
+<%= form_with model: @theme do |f| %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %><br>
+    <br>
+    <%= f.submit %>
+<% end %>
